@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>골프 성향 16유형 — 나의 골프 4글자는?</title>
+<meta name="description" content="14개의 극단적인 밸런스게임으로 알아보는 나의 골프 성향 4글자. 골프 스타일, 골프 심리, 골프 궁합까지.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="골프 성향 16유형 — 나의 골프 4글자는?">
+<meta property="og:description" content="14개의 극단적인 밸런스게임으로 알아보는 나의 골프 성향 4글자.">
+<meta property="og:image" content="https://ishur1125-design.github.io/golf-balance-game/og-image.png">
+<meta property="og:url" content="https://ishur1125-design.github.io/golf-balance-game/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%B3%3C/text%3E%3C/svg%3E">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --green-900:#07251a; --green-800:#0d3626; --green-700:#14503a;
+  --lime:#c3f53c; --lime-dim:#8fbf2a; --gold:#f5c518;
+  --ink:#12211b; --ink-2:#4a5c53; --ink-3:#8a9a92;
+  --card:#ffffff; --line:#e4ebe7;
+  --shadow:0 8px 30px rgba(0,0,0,.18);
+}
+html,body{height:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;
+  background:var(--green-900);
+  background-image:radial-gradient(120% 80% at 50% 0%,#14503a 0%,#0b2e20 45%,#07251a 100%);
+  color:var(--ink); line-height:1.6; letter-spacing:-.01em;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:480px;margin:0 auto;padding:0 16px;min-height:100%;display:flex;flex-direction:column}
+.screen{display:none;flex:1;flex-direction:column;padding:24px 0 40px}
+.screen.on{display:flex}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+
+/* ---------- 공통 ---------- */
+.card{background:var(--card);border-radius:20px;padding:24px 20px;box-shadow:var(--shadow)}
+.card+.card{margin-top:14px}
+.sec-label{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--lime-dim);text-transform:uppercase;margin-bottom:6px}
+.sec-title{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:14px;letter-spacing:-.02em}
+.btn{display:block;width:100%;padding:17px;border-radius:14px;font-size:17px;font-weight:800;text-align:center;transition:transform .12s ease,opacity .12s}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--lime);color:#0c2a1d;box-shadow:0 6px 20px rgba(195,245,60,.28)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.btn-sub{background:#f1f5f2;color:var(--ink-2);font-size:15px;font-weight:700;padding:14px}
+.btn[disabled]{opacity:.35;pointer-events:none}
+.stack{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+
+/* ---------- 인트로 ---------- */
+.intro-top{flex:1;display:flex;flex-direction:column;justify-content:center;text-align:center;color:#fff;padding:20px 0}
+.eyebrow{font-size:13px;font-weight:700;color:var(--lime);letter-spacing:.14em;margin-bottom:14px}
+.hero-code{font-size:15px;font-weight:800;color:rgba(255,255,255,.5);letter-spacing:.4em;margin-bottom:18px}
+.hero{font-size:34px;font-weight:900;line-height:1.28;letter-spacing:-.03em;margin-bottom:16px}
+.hero em{font-style:normal;color:var(--lime)}
+.hero-sub{font-size:15px;color:rgba(255,255,255,.68);line-height:1.7}
+.meta-row{display:flex;justify-content:center;gap:18px;margin-top:26px;font-size:13px;color:rgba(255,255,255,.55)}
+.meta-row span{display:flex;align-items:center;gap:5px}
+.notice{font-size:11.5px;color:rgba(255,255,255,.4);text-align:center;margin-top:16px;line-height:1.65}
+.invited{background:rgba(195,245,60,.12);border:1px solid rgba(195,245,60,.35);border-radius:16px;padding:16px;margin-bottom:22px;text-align:center;color:#fff}
+.invited b{color:var(--lime)}
+.invited .t{font-size:13px;color:rgba(255,255,255,.7);margin-top:4px}
+
+/* ---------- 인적사항 폼 ---------- */
+.form-head{color:#fff;margin-bottom:18px}
+.form-head h2{font-size:23px;font-weight:900;letter-spacing:-.02em}
+.form-head p{font-size:14px;color:rgba(255,255,255,.6);margin-top:6px}
+.field{margin-bottom:20px}
+.field>label{display:block;font-size:14px;font-weight:800;color:var(--ink);margin-bottom:9px}
+.field>label span{font-weight:600;color:var(--ink-3);font-size:12.5px;margin-left:5px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{padding:10px 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-size:14px;font-weight:600;color:var(--ink-2);transition:all .12s}
+.chip.on{background:var(--green-700);border-color:var(--green-700);color:#fff;font-weight:800}
+input[type=text]{width:100%;padding:14px;border:1.5px solid var(--line);border-radius:13px;font-size:16px;font-weight:600;color:var(--ink);background:#fff}
+input[type=text]:focus{outline:none;border-color:var(--green-700)}
+
+/* ---------- 퀴즈 ---------- */
+.q-top{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.q-back{color:rgba(255,255,255,.55);font-size:22px;line-height:1;padding:4px 8px 6px}
+.bar{flex:1;height:6px;background:rgba(255,255,255,.16);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--lime);border-radius:99px;transition:width .3s ease}
+.q-num{font-size:13px;font-weight:800;color:rgba(255,255,255,.6);min-width:38px;text-align:right}
+.q-title{color:#fff;font-size:22px;font-weight:900;line-height:1.42;letter-spacing:-.025em;margin-bottom:6px}
+.q-hint{color:rgba(255,255,255,.5);font-size:13.5px;margin-bottom:22px}
+.opts{display:flex;flex-direction:column;gap:12px}
+.opt{background:var(--card);border-radius:18px;padding:22px 20px;text-align:left;box-shadow:var(--shadow);transition:transform .12s ease;position:relative;border:2px solid transparent}
+.opt:active{transform:scale(.985)}
+.opt.sel{border-color:var(--lime);box-shadow:0 8px 30px rgba(195,245,60,.3)}
+.opt-tag{display:inline-block;font-size:11px;font-weight:900;color:#fff;background:var(--green-700);padding:3px 9px;border-radius:99px;margin-bottom:9px;letter-spacing:.05em}
+.opt-text{font-size:16.5px;font-weight:700;color:var(--ink);line-height:1.5;letter-spacing:-.02em}
+.vs{text-align:center;font-size:13px;font-weight:900;color:rgba(255,255,255,.35);letter-spacing:.2em;padding:2px 0}
+
+/* ---------- 로딩 ---------- */
+.load{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;gap:22px}
+.ball{width:54px;height:54px;border-radius:50%;background:#fff;position:relative;animation:bounce .9s cubic-bezier(.5,.05,.5,.95) infinite alternate;box-shadow:inset -6px -6px 12px rgba(0,0,0,.12)}
+.ball::after{content:"";position:absolute;inset:0;border-radius:50%;background-image:radial-gradient(circle,rgba(0,0,0,.13) 1.4px,transparent 1.5px);background-size:9px 9px}
+@keyframes bounce{from{transform:translateY(-14px)}to{transform:translateY(10px)}}
+.load-msg{font-size:16px;font-weight:700;min-height:26px}
+.load-sub{font-size:13px;color:rgba(255,255,255,.5)}
+
+/* ---------- 결과 ---------- */
+.hero-card{background:linear-gradient(160deg,#0f4530 0%,#0a2c1f 100%);border-radius:24px;padding:30px 22px 26px;text-align:center;color:#fff;box-shadow:var(--shadow);border:1px solid rgba(195,245,60,.22)}
+.hero-nick{font-size:13.5px;color:rgba(255,255,255,.62);margin-bottom:14px}
+.code-row{display:flex;justify-content:center;gap:7px;margin-bottom:16px}
+.code-ltr{width:52px;height:60px;border-radius:13px;background:rgba(195,245,60,.14);border:1.5px solid rgba(195,245,60,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;transition:all .15s}
+.code-ltr b{font-size:26px;font-weight:900;color:var(--lime);line-height:1}
+.code-ltr i{font-size:10px;font-style:normal;color:rgba(255,255,255,.55);font-weight:700}
+.code-ltr:active{transform:scale(.95)}
+.type-emoji{font-size:46px;line-height:1;margin-bottom:8px}
+.type-mod{font-size:15px;color:rgba(255,255,255,.75);font-weight:600}
+.type-name{font-size:31px;font-weight:900;color:var(--lime);letter-spacing:-.03em;line-height:1.25;margin-top:2px}
+.type-one{font-size:14px;color:rgba(255,255,255,.6);margin-top:12px;line-height:1.6}
+
+/* 4축 그래프 */
+.axis{margin-bottom:18px}
+.axis:last-child{margin-bottom:0}
+.axis-head{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:700;margin-bottom:7px}
+.axis-head .l,.axis-head .r{display:flex;align-items:baseline;gap:5px}
+.axis-head b{font-size:16px;font-weight:900}
+.axis-head .win{color:var(--green-700)}
+.axis-head .lose{color:#c3cec8}
+.axis-bar{height:12px;border-radius:99px;background:#eef2f0;overflow:hidden;display:flex}
+.axis-bar i{display:block;height:100%;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.axis-bar .fill{background:linear-gradient(90deg,#1a6647,#2b8f63)}
+.axis-bar .fill.right{background:linear-gradient(90deg,#2b8f63,#1a6647)}
+.axis-pct{display:flex;justify-content:space-between;font-size:11.5px;font-weight:800;color:var(--ink-3);margin-top:5px}
+.axis-pct .win{color:var(--green-700)}
+.axis.hl{background:#f4fae8;margin:-8px -10px 10px;padding:8px 10px;border-radius:12px}
+.axis-desc{font-size:13px;color:var(--ink-2);margin-top:8px;line-height:1.6;background:#f4fae8;padding:10px 12px;border-radius:11px;display:none}
+.axis-desc.on{display:block}
+
+/* 본문 */
+.body-text p{font-size:15px;color:var(--ink-2);line-height:1.78;margin-bottom:13px}
+.body-text p:last-child{margin-bottom:0}
+.body-text b{color:var(--ink);font-weight:800}
+.callout{background:#f4fae8;border-radius:13px;padding:15px;font-size:14.5px;color:#2c4436;line-height:1.7;margin-top:14px}
+.callout b{color:#14503a}
+.kv{display:flex;gap:10px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.kv:last-child{border-bottom:none;padding-bottom:0}
+.kv .k{flex:0 0 74px;font-weight:800;color:var(--green-700)}
+.kv .v{flex:1;color:var(--ink-2);line-height:1.6}
+
+/* 궁합 */
+.mate{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:15px;margin-bottom:10px}
+.mate.best{background:#eef9e2}
+.mate.worst{background:#fdeeee}
+.mate:last-child{margin-bottom:0}
+.mate-emoji{font-size:32px;line-height:1.2}
+.mate-b{flex:1;min-width:0}
+.mate-lab{font-size:11px;font-weight:900;letter-spacing:.06em;margin-bottom:3px}
+.mate.best .mate-lab{color:#3d7a1c}
+.mate.worst .mate-lab{color:#c0392b}
+.mate-name{font-size:16.5px;font-weight:900;color:var(--ink);letter-spacing:-.02em}
+.mate-name span{font-size:12px;font-weight:900;color:var(--ink-3);margin-left:6px;letter-spacing:.05em}
+.mate-why{font-size:13.5px;color:var(--ink-2);margin-top:6px;line-height:1.65}
+.score-pill{font-size:12px;font-weight:900;color:#fff;background:var(--green-700);padding:3px 9px;border-radius:99px;margin-left:6px}
+.mate.worst .score-pill{background:#c0392b}
+
+/* 선택 비율 */
+.stat{padding:14px 0;border-bottom:1px solid var(--line)}
+.stat:last-child{border-bottom:none;padding-bottom:0}
+.stat-q{font-size:13px;font-weight:700;color:var(--ink-3);margin-bottom:8px}
+.stat-row{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.stat-row:last-child{margin-bottom:0}
+.stat-txt{flex:1;font-size:13.5px;color:var(--ink-2);line-height:1.45;min-width:0}
+.stat-row.mine .stat-txt{color:var(--ink);font-weight:800}
+.stat-track{flex:0 0 82px;height:9px;background:#eef2f0;border-radius:99px;overflow:hidden}
+.stat-track i{display:block;height:100%;background:#c3cec8;border-radius:99px}
+.stat-row.mine .stat-track i{background:var(--green-700)}
+.stat-pct{flex:0 0 38px;text-align:right;font-size:12.5px;font-weight:800;color:var(--ink-3)}
+.stat-row.mine .stat-pct{color:var(--green-700)}
+.rare{display:inline-block;font-size:10.5px;font-weight:900;color:#fff;background:var(--gold);padding:2px 7px;border-radius:99px;margin-left:6px;vertical-align:middle}
+.stat-empty{font-size:14px;color:var(--ink-3);text-align:center;padding:22px 10px;line-height:1.7}
+
+/* 접이식 */
+.acc{border-top:1px solid var(--line);padding-top:16px;margin-top:16px}
+.acc-btn{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:15px;font-weight:800;color:var(--ink)}
+.acc-btn i{font-style:normal;color:var(--ink-3);transition:transform .2s}
+.acc.on .acc-btn i{transform:rotate(180deg)}
+.acc-body{display:none;padding-top:14px}
+.acc.on .acc-body{display:block}
+.ltr-row{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.ltr-row:last-child{border-bottom:none}
+.ltr-badge{flex:0 0 30px;height:30px;border-radius:9px;background:var(--green-700);color:#fff;font-weight:900;font-size:15px;display:flex;align-items:center;justify-content:center}
+.ltr-b{flex:1}
+.ltr-b b{font-size:14px;font-weight:800;color:var(--ink)}
+.ltr-b p{font-size:13px;color:var(--ink-2);line-height:1.55;margin-top:2px}
+
+/* 16유형 목록 */
+.all-grid{display:flex;flex-direction:column;gap:8px}
+.all-item{display:flex;align-items:center;gap:11px;padding:12px 13px;border-radius:13px;background:#f7faf8;text-align:left;width:100%}
+.all-item.me{background:#eef9e2;border:1.5px solid var(--lime-dim)}
+.all-emoji{font-size:22px}
+.all-code{flex:0 0 46px;font-size:12.5px;font-weight:900;color:var(--green-700);letter-spacing:.03em}
+.all-name{flex:1;font-size:14px;color:var(--ink-2);line-height:1.45}
+.all-name b{color:var(--ink);font-weight:800}
+.me-tag{font-size:10px;font-weight:900;color:#fff;background:var(--green-700);padding:2px 7px;border-radius:99px}
+
+/* 공유 */
+.share-note{font-size:12.5px;color:rgba(255,255,255,.45);text-align:center;margin-top:12px;line-height:1.65}
+.toast{position:fixed;left:50%;bottom:32px;transform:translateX(-50%) translateY(20px);background:rgba(10,40,28,.95);color:#fff;padding:13px 20px;border-radius:99px;font-size:14px;font-weight:700;opacity:0;pointer-events:none;transition:all .25s;z-index:99;box-shadow:var(--shadow)}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+.foot{text-align:center;font-size:11.5px;color:rgba(255,255,255,.32);padding:26px 0 10px;line-height:1.8}
+canvas{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ================= 인트로 ================= -->
+<section id="s-intro" class="screen on">
+  <div class="intro-top">
+    <div id="invitedBox" class="invited" style="display:none"></div>
+    <div class="eyebrow">GOLF BALANCE GAME</div>
+    <div class="hero-code">D · S · P · N</div>
+    <h1 class="hero">골프 성향<br><em>16유형</em></h1>
+    <p class="hero-sub">
+      극단적인 14개의 선택으로 알아보는<br>나의 <b>골프 4글자</b>.<br>
+      스타일 · 심리 · 골프 궁합까지.
+    </p>
+    <div class="meta-row">
+      <span>⛳ 14문항</span><span>⏱ 약 2분 30초</span><span>🎯 16유형</span>
+    </div>
+  </div>
+  <div class="stack">
+    <button class="btn btn-primary" onclick="go('form')">시작하기</button>
+    <button class="btn btn-ghost" onclick="openAll(null)">16유형 먼저 구경하기</button>
+  </div>
+  <p class="notice">
+    중간 선택지는 없습니다. 무조건 하나를 고르셔야 합니다.<br>
+    입력하신 닉네임은 저장되지 않으며, 통계는 익명으로만 집계됩니다.
+  </p>
+</section>
+
+<!-- ================= 인적사항 ================= -->
+<section id="s-form" class="screen">
+  <div class="form-head">
+    <h2>먼저, 당신에 대해</h2>
+    <p>결과 설명을 맞춤으로 바꾸는 데만 쓰입니다. 점수에는 영향이 없어요.</p>
+  </div>
+  <div class="card">
+    <div class="field">
+      <label>닉네임 <span>결과 카드에 표시돼요</span></label>
+      <input type="text" id="nick" maxlength="8" placeholder="예: 버디사냥꾼" autocomplete="off">
+    </div>
+    <div class="field"><label>성별</label><div class="chips" data-f="gender"></div></div>
+    <div class="field"><label>나이대</label><div class="chips" data-f="age"></div></div>
+    <div class="field"><label>구력</label><div class="chips" data-f="career"></div></div>
+    <div class="field"><label>평균 타수</label><div class="chips" data-f="score"></div></div>
+    <div class="field" style="margin-bottom:0"><label>골프를 치는 가장 큰 이유</label><div class="chips" data-f="purpose"></div></div>
+  </div>
+  <div class="stack">
+    <button class="btn btn-primary" id="formNext" disabled onclick="startQuiz()">밸런스게임 시작</button>
+    <button class="btn btn-sub" onclick="go('intro')">뒤로</button>
+  </div>
+</section>
+
+<!-- ================= 퀴즈 ================= -->
+<section id="s-quiz" class="screen">
+  <div class="q-top">
+    <button class="q-back" onclick="prevQ()">‹</button>
+    <div class="bar"><i id="bar" style="width:0%"></i></div>
+    <div class="q-num" id="qnum">1/14</div>
+  </div>
+  <h2 class="q-title" id="qtitle"></h2>
+  <p class="q-hint">둘 중 하나만 고를 수 있다면?</p>
+  <div class="opts">
+    <button class="opt" id="optA" onclick="pick(0)">
+      <span class="opt-tag">A</span>
+      <div class="opt-text" id="optAText"></div>
+    </button>
+    <div class="vs">VS</div>
+    <button class="opt" id="optB" onclick="pick(1)">
+      <span class="opt-tag">B</span>
+      <div class="opt-text" id="optBText"></div>
+    </button>
+  </div>
+</section>
+
+<!-- ================= 로딩 ================= -->
+<section id="s-load" class="screen">
+  <div class="load">
+    <div class="ball"></div>
+    <div class="load-msg" id="loadMsg">스코어카드를 넘겨보는 중…</div>
+    <div class="load-sub">14개의 선택을 4개의 축으로 환산하고 있습니다</div>
+  </div>
+</section>
+
+<!-- ================= 결과 ================= -->
+<section id="s-result" class="screen">
+  <div class="hero-card">
+    <div class="hero-nick" id="rNick"></div>
+    <div class="code-row" id="codeRow"></div>
+    <div class="type-emoji" id="rEmoji"></div>
+    <div class="type-mod" id="rMod"></div>
+    <div class="type-name" id="rName"></div>
+    <div class="type-one" id="rOne"></div>
+  </div>
+
+  <div class="card">
+    <div class="sec-label">AXIS</div>
+    <div class="sec-title">4개의 축으로 본 나</div>
+    <div id="axes"></div>
+    <div class="acc" id="accLtr">
+      <button class="acc-btn" onclick="toggleAcc('accLtr')">골프 4글자 읽는 법 <i>▾</i></button>
+      <div class="acc-body" id="ltrTable"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="sec-label">STYLE</div>
+    <div class="sec-title">1. 나의 골프 스타일</div>
+    <div class="body-text" id="rStyle"></div>
+    <div class="callout" id="rTip"></div>
+  </div>
+
+  <div class="card">
+    <div class="sec-label">MIND</div>
+    <div class="sec-title">2. 나의 골프 심리</div>
+    <div class="body-text" id="rPsych"></div>
+    <div style="margin-top:14px" id="rMindKv"></div>
+  </div>
+
+  <div class="card">
+    <div class="sec-label">PARTNER</div>
+    <div class="sec-title">3. 나의 동반자 궁합</div>
+    <div id="rMates"></div>
+    <div class="callout" id="rPurpose"></div>
+  </div>
+
+  <div class="card" id="cmpCard" style="display:none">
+    <div class="sec-label">MATCH</div>
+    <div class="sec-title" id="cmpTitle">친구와의 궁합</div>
+    <div id="cmpBody"></div>
+  </div>
+
+  <div class="card">
+    <div class="sec-label">OTHERS</div>
+    <div class="sec-title">4. 내 선택 vs 다른 사람들</div>
+    <div id="rStats"></div>
+  </div>
+
+  <div class="stack">
+    <button class="btn btn-primary" onclick="shareLink()">결과 링크 공유하기</button>
+    <button class="btn btn-ghost" onclick="saveCard()">결과 카드 이미지 저장</button>
+    <button class="btn btn-ghost" onclick="openAll(state.type)">16유형 전부 보기</button>
+    <button class="btn btn-sub" onclick="restart()">처음부터 다시하기</button>
+  </div>
+  <p class="share-note">링크로 공유하면 친구가 테스트를 마쳤을 때<br>서로의 궁합이 바로 계산돼서 나옵니다.</p>
+  <div class="foot">골프 성향 16유형 · 재미로 보는 테스트입니다<br>공인 심리검사가 아닙니다</div>
+</section>
+
+<!-- ================= 16유형 전부 ================= -->
+<section id="s-all" class="screen">
+  <div class="form-head">
+    <h2>골프 성향 16유형</h2>
+    <p id="allSub">당신은 어느 쪽에 가깝나요?</p>
+  </div>
+  <div class="card">
+    <div class="all-grid" id="allGrid"></div>
+  </div>
+  <div class="stack">
+    <button class="btn btn-primary" id="allCta" onclick="allBack()">테스트 시작하기</button>
+  </div>
+  <div class="foot">코드를 누르면 해당 유형 설명이 열립니다</div>
+</section>
+
+</div>
+<div class="toast" id="toast"></div>
+<canvas id="cv" width="1080" height="1350"></canvas>
+<script>
+/* ============================================================
+   골프 성향 16유형 — 설정
+   ============================================================ */
+// Apps Script 웹앱 URL. 비워두면 집계 기능이 통째로 꺼집니다.
+var API_URL = "";
+// 이 인원수 미만이면 '내 선택 vs 다른 사람들' 비율을 숨깁니다.
+var MIN_N = 30;
+
+/* ---------- 4개의 축 ---------- */
+var AXES = [
+  {key:"play", L:"D", R:"L", ln:"공격", rn:"안전",
+   ld:"위험을 감수하고 핀을 노리는 쪽. 거리와 한 방을 먼저 봅니다.",
+   rd:"돌아가더라도 확실한 쪽. 레이업과 페어웨이를 먼저 봅니다."},
+  {key:"goal", L:"S", R:"F", ln:"스코어", rn:"분위기",
+   ld:"오늘 몇 개 쳤는지가 라운드의 결론. 기록과 승부가 중요합니다.",
+   rd:"누구와 어떻게 놀았는지가 라운드의 결론. 사람과 분위기가 중요합니다."},
+  {key:"prep", L:"P", R:"I", ln:"계획", rn:"즉흥",
+   ld:"코스도 장비도 미리 알아보고 갑니다. 준비가 곧 실력.",
+   rd:"가서 보면 됩니다. 그날의 감에 맡기는 쪽."},
+  {key:"mental",L:"N", R:"C", ln:"예민", rn:"무던",
+   ld:"시선과 실수가 오래 남습니다. 예민한 만큼 섬세합니다.",
+   rd:"한 홀 망해도 다음 홀엔 잊습니다. 잘 안 흔들립니다."}
+];
+
+/* ---------- 14문항 ----------
+   ax: 축, a/b: 각 선택지가 가리키는 글자 */
+var QS = [
+  {ax:"play",  t:"드라이버 딱 하나만 고를 수 있다면?",
+   a:"300m 날아가는데 방향은 매번 랜덤", av:"D",
+   b:"180m밖에 안 나가는데 무조건 페어웨이 한가운데", bv:"L"},
+  {ax:"goal",  t:"평생 딱 한 번의 라운드가 이렇게 정해진다면?",
+   a:"인생 최고 스코어가 나오는데 폭우 속에서 혼자 라운드", av:"S",
+   b:"백돌이를 치는데 완벽한 날씨에 최고의 동반자", bv:"F"},
+  {ax:"prep",  t:"내일 라운드다. 오늘 밤 나는?",
+   a:"코스 공략 영상 2시간 정독하고 홀별 전략 메모", av:"P",
+   b:"내일 어느 골프장인지 아침에 확인할 예정", bv:"I"},
+  {ax:"mental",t:"둘 중 하나는 반드시 겪는다면?",
+   a:"라운드 전날 밤 긴장돼서 한숨도 못 잠", av:"N",
+   b:"라운드 당일 늦잠 자서 티타임에 지각", bv:"C"},
+  {ax:"play",  t:"평생 골프가 이렇게 고정된다면?",
+   a:"매 라운드 이글 1개 + OB 3개", av:"D",
+   b:"평생 이글 한 번 없음 + 평생 OB 한 번 없음", bv:"L"},
+  {ax:"goal",  t:"소원 하나를 들어준다면?",
+   a:"내 스코어가 5타 줄어든다", av:"F",
+   b:"내 스코어는 그대로인데 동반자 전원이 5타씩 늘어난다", bv:"S"},
+  {ax:"prep",  t:"내 골프 일정이 이렇게 된다면?",
+   a:"1년치 라운드가 이미 다 예약되어 있음", av:"P",
+   b:"다음 라운드가 언제일지 나도 모름", bv:"I"},
+  {ax:"mental",t:"오늘 라운드에서 하나는 반드시 일어난다면?",
+   a:"앞 팀이 홀마다 30분씩 밀린다", av:"N",
+   b:"뒤 팀이 계속 붙어서 재촉한다", bv:"C"},
+  {ax:"play",  t:"파4 티박스. 오늘의 나는?",
+   a:"원온 노린다. 성공 확률 50%, 실패하면 트리플", av:"D",
+   b:"안전하게 끊어 간다. 대신 보기 확정", bv:"L"},
+  {ax:"goal",  t:"OB가 났는데 아무도 못 봤다.",
+   a:"조용히 옮기고 1타 이득. 나만 알면 된다", av:"S",
+   b:"정직하게 신고하고 3타 손해. 마음은 편하다", bv:"F"},
+  {ax:"prep",  t:"신상 드라이버가 눈에 들어왔다.",
+   a:"6개월간 리뷰·시타·중고가까지 다 뒤진 뒤 구매", av:"P",
+   b:"매장에서 예뻐서 그 자리에서 결제", bv:"I"},
+  {ax:"mental",t:"둘 중 하나를 감수해야 한다면?",
+   a:"내기에서 5만원을 잃는다", av:"N",
+   b:"내 뒤땅 영상이 단톡방에 박제된다", bv:"C"},
+  {ax:"goal",  t:"평생 이 동반자와만 쳐야 한다면?",
+   a:"실력은 좋은데 홀마다 훈수 두는 사람", av:"S",
+   b:"실력은 없는데 매 샷 \"나이스샷!\" 외쳐주는 사람", bv:"F"},
+  {ax:"mental",t:"평생 OB가 여기서만 난다면?",
+   a:"평생 첫 홀에서만 OB", av:"C",
+   b:"평생 마지막 홀에서만 OB", bv:"N"}
+];
+
+/* ---------- 인적사항 옵션 ---------- */
+var FIELDS = {
+  gender:["남성","여성","밝히지 않음"],
+  age:["20대","30대","40대","50대","60대 이상"],
+  career:["1년 미만","1~3년","3~5년","5~10년","10년 이상"],
+  score:["70대 이하","80대","90대","100대","110대 이상","아직 모름"],
+  purpose:["실력 향상","친목·모임","비즈니스","스트레스 해소"]
+};
+
+/* ---------- 16유형 ---------- */
+var T = {
+DSPN:{e:"🔥",mod:"핀만 보면 못참는",name:"불나방",
+ one:"공략은 완벽하게 짜오고, 결론은 언제나 핀 다이렉트.",
+ style:["그린 앞에 워터해저드가 있든 벙커가 입을 벌리고 있든, 당신 눈에는 깃대밖에 안 보입니다. 레이업이라는 단어를 모르는 건 아니에요. <b>알고만 있습니다.</b>",
+ "웃긴 건 준비를 안 해오는 것도 아니라는 점입니다. 홀별 공략을 다 짜서 오는데 그 공략의 결론이 매번 '핀 다이렉트'예요. <b>계획적으로 무모합니다.</b>",
+ "잘 풀리는 날엔 동반자들이 입을 못 다물고, 안 풀리는 날엔 당신이 입을 안 엽니다. 그 낙차가 곧 당신의 매력이자 문제입니다."],
+ psych:"스코어에 진심인데 멘탈까지 예민한 조합이라, 한 홀이 어긋나면 <b>만회하려고 더 크게 지르는</b> 회로가 작동합니다. 트리플은 대개 첫 실수가 아니라 그 다음 샷에서 나옵니다.",
+ kv:[["최강일 때","전반 3홀이 잘 풀렸을 때. 이때는 정말 아무도 못 말립니다."],
+     ["무너질 때","기대했던 홀에서 한 타 까먹은 직후. 다음 티샷이 위험합니다."],
+     ["처방","망친 홀 다음 홀은 무조건 레이업. 딱 한 홀만 참으면 됩니다."]]},
+
+DSPC:{e:"🚀",mod:"계산 끝내고 지르는",name:"폭격기",
+ one:"공격적인데 흔들리지 않는, 사실상 가장 무서운 유형.",
+ style:["당신도 지릅니다. 다만 <b>지르기 전에 이미 계산이 끝나 있습니다.</b> 바람, 남은 거리, 실패했을 때의 손해까지 다 넣고 나서 우드를 뽑아요.",
+ "그리고 실패해도 표정이 안 변합니다. 동반자 입장에서는 이게 제일 무섭습니다. 화를 내야 만만해 보일 텐데 그냥 다음 홀로 걸어가요.",
+ "장비도 아마 좋은 걸 쓰실 겁니다. 충동구매가 아니라 <b>6개월 리서치의 결과물</b>이라는 게 다를 뿐이죠."],
+ psych:"목표는 뚜렷하고 멘탈은 단단합니다. 약점은 오히려 <b>실패를 너무 빨리 넘겨버린다</b>는 것. 같은 실수가 반복되는데 감정이 안 상하니 교정 타이밍을 놓칩니다.",
+ kv:[["최강일 때","바람 불고 조건 나쁜 날. 남들 무너질 때 혼자 멀쩡합니다."],
+     ["무너질 때","거의 없습니다. 다만 지루해지면 집중이 풀립니다."],
+     ["처방","라운드 후 실수 3개만 메모하기. 안 상하는 만큼 기록으로 남기세요."]]},
+
+DSIN:{e:"🎲",mod:"지르고 후회하는",name:"도박사",
+ one:"준비는 감으로, 후회는 밤새도록.",
+ style:["티박스에 서면 계산보다 <b>그날의 느낌</b>이 먼저 옵니다. 그리고 그 느낌은 대체로 '오늘은 될 것 같은데'예요.",
+ "문제는 안 됐을 때입니다. 차 안에서, 저녁 먹으면서, 자기 전에 그 샷을 다시 칩니다. <b>머릿속에서만 15번쯤 다시 쳐요.</b>",
+ "그래서 당신의 라운드는 늘 드라마틱합니다. 이글과 양파가 한 라운드에 공존하는, 보는 사람은 재미있고 치는 사람은 힘든 골프."],
+ psych:"즉흥적으로 지르는데 결과에는 예민하니 <b>후회의 총량이 가장 큰 유형</b>입니다. 실력이 없어서가 아니라, 준비 없이 지른 뒤 스스로를 탓하는 구조 때문입니다.",
+ kv:[["최강일 때","아무 생각 없이 친 첫 홀. 감이 오면 진짜 잘 칩니다."],
+     ["무너질 때","'아까 그거 왜 그렇게 쳤지'가 시작되는 순간."],
+     ["처방","티샷 전 3초만 클럽 이유 말하기. 즉흥에 근거만 붙이면 후회가 반으로 줍니다."]]},
+
+DSIC:{e:"🐎",mod:"일단 치고 보는",name:"야생마",
+ one:"고민 없이 치고, 미련 없이 갑니다.",
+ style:["어드레스부터 임팩트까지 3초. 남들이 클럽 고르는 동안 당신은 이미 쳤습니다. <b>고민은 스윙을 망친다</b>는 게 지론이죠.",
+ "OB가 나도 표정이 그대로입니다. 억지로 참는 게 아니라 진짜로 별로 신경을 안 씁니다. 다음 홀에 가면 방금 뭘 쳤는지도 잘 기억 안 나요.",
+ "동반자들은 당신 페이스를 좋아합니다. 라운드가 안 밀리거든요. <b>단, 스코어카드는 아마 남이 적어줘야 할 겁니다.</b>"],
+ psych:"이기고는 싶은데 과정에는 관심이 없는 조합입니다. 감정 소모가 없다는 건 큰 재능인데, 대신 <b>같은 실수를 3년째 반복</b>할 수 있습니다.",
+ kv:[["최강일 때","컨디션이 안 좋은 날. 남들 다 무너져도 평소만큼 칩니다."],
+     ["무너질 때","진지하게 잘 쳐보려고 마음먹은 날."],
+     ["처방","한 라운드에 한 홀만 '천천히 치는 홀'로 정해두기."]]},
+
+DFPN:{e:"🎤",mod:"관심을 먹고사는",name:"무대체질",
+ one:"스코어보다 오늘의 명장면이 중요합니다.",
+ style:["당신에게 골프는 <b>기록이 아니라 무대</b>입니다. 동반자가 보고 있으면 힘이 나고, 아무도 안 보면 힘이 안 납니다. 정직하게 그렇습니다.",
+ "그래서 준비도 잘 해옵니다. 새 골프웨어, 새 클럽, 오늘 쓸 멘트까지. 문제는 <b>보는 눈이 많을수록 스윙이 커진다</b>는 거예요.",
+ "라운드 끝나고 단톡방에 사진 올리는 사람은 대체로 당신입니다. 스코어카드는 안 올립니다. 그건 중요한 게 아니니까요."],
+ psych:"타인의 시선이 곧 연료이자 압박입니다. 갤러리가 생기면 실력의 120%가 나오다가, <b>한 번 민망해지는 순간 급격히 무너집니다.</b>",
+ kv:[["최강일 때","동반자들이 다 지켜보는 파3 티샷."],
+     ["무너질 때","모두가 보는 앞에서 뒤땅. 그 홀은 이미 끝났습니다."],
+     ["처방","민망한 샷 직후엔 먼저 웃어버리기. 웃으면 그 홀이 거기서 끝납니다."]]},
+
+DFPC:{e:"🎉",mod:"판 키우는",name:"분위기 반장",
+ one:"골프 실력보다 라운드 기획력이 뛰어납니다.",
+ style:["티타임 잡고, 사람 모으고, 뒤풀이 예약까지 하는 사람. <b>그러고는 정작 본인 스코어는 별로 신경 안 씁니다.</b>",
+ "샷은 시원시원합니다. 안전하게 갈 이유를 못 찾아요. 어차피 오늘의 목적은 재미니까 큰 거 한 방이 훨씬 남는 장사죠.",
+ "안 풀리는 날에도 분위기는 그대로입니다. <b>당신이 무너지면 그 팀 전체가 조용해지기 때문에</b>, 당신은 잘 안 무너집니다."],
+ psych:"멘탈이 단단한데 목적이 즐거움이라, 골프로 스트레스받을 일이 거의 없는 축복받은 조합입니다. 대신 <b>실력이 잘 안 늡니다.</b> 늘 필요가 없거든요.",
+ kv:[["최강일 때","인원 많고 시끄러운 라운드. 물 만난 고기."],
+     ["무너질 때","전원 진지한 스코어 경쟁 라운드. 재미가 없어집니다."],
+     ["처방","1년에 두세 번은 조용한 라운드도. 실력은 거기서 붙습니다."]]},
+
+DFIN:{e:"🎢",mod:"롤러코스터인가..",name:"기복이",
+ one:"오늘 잘 칠지 못 칠지 본인도 모릅니다.",
+ style:["준비도 안 하고, 계산도 안 하고, 일단 시원하게 칩니다. 그런데 <b>결과에는 또 마음이 쓰입니다.</b> 이 조합이 롤러코스터를 만듭니다.",
+ "잘 맞은 홀에서는 세상을 다 가진 것 같고, 망한 홀에서는 클럽을 바꿔야 하나 진지하게 고민합니다. 그 사이 간격이 <b>한 홀</b>입니다.",
+ "동반자들은 당신 라운드를 보는 게 재밌다고들 합니다. 정작 당신은 4시간 동안 감정을 다 쓰고 나와요."],
+ psych:"기복의 원인은 실력이 아니라 <b>기대치가 매번 새로 설정된다</b>는 데 있습니다. 잘 맞은 샷 하나에 오늘의 목표가 갑자기 올라가고, 그 순간부터 무너지기 시작합니다.",
+ kv:[["최강일 때","기대 없이 나온 날. 이런 날 라베가 나옵니다."],
+     ["무너질 때","전반에 잘 쳐서 '오늘 되는데?' 소리가 나온 직후."],
+     ["처방","전반 스코어를 후반에 절대 언급하지 않기. 이것만 지켜도 다릅니다."]]},
+
+DFIC:{e:"🌊",mod:"될 대로 되라",name:"낭만파",
+ one:"계획도 없고 미련도 없고, 그냥 골프가 좋습니다.",
+ style:["오늘 어디로 가는지 차에 타서 알았고, 클럽은 예뻐서 샀고, 스코어는 세다가 말았습니다. <b>그런데 만족도는 팀에서 제일 높습니다.</b>",
+ "샷은 과감합니다. 안전하게 갈 이유가 없어요. 어차피 결과에 크게 마음 두지 않으니 그냥 재밌는 쪽으로 칩니다.",
+ "골프를 오래 칠 유형입니다. 이 게임으로 상처를 안 받거든요."],
+ psych:"즐기려는 목적에 단단한 멘탈까지 붙어서 <b>골프 스트레스가 거의 0에 수렴</b>합니다. 유일한 약점은 실력 향상 곡선이 아주 완만하다는 것.",
+ kv:[["최강일 때","날씨 좋은 날 아무 데나. 조건을 안 탑니다."],
+     ["무너질 때","돈 걸린 진지한 내기. 재미가 사라지면 동력도 사라집니다."],
+     ["처방","목표를 스코어 말고 '이번엔 드라이버만' 같은 걸로 잡기."]]},
+
+LSPN:{e:"🧮",mod:"레이업이 곧 실력인",name:"인간 계산기",
+ one:"핀까지 몇 미터인지 물어보면 답이 나옵니다.",
+ style:["당신에게 골프는 <b>확률 게임</b>입니다. 원온 성공률 40%면 안 갑니다. 재미없다는 소리를 듣지만 스코어카드는 당신 편이에요.",
+ "전날 코스 공략은 기본이고, 홀별로 어떤 클럽을 잡을지 이미 정해두고 옵니다. 그 계획이 어긋나면 <b>그때부터 조금 예민해집니다.</b>",
+ "동반자들은 당신을 믿습니다. 내기할 때 같은 편 하고 싶어 하는 사람이 바로 당신입니다."],
+ psych:"계산이 정확한 만큼 <b>계산 밖의 상황에 약합니다.</b> 예상 못 한 라이, 갑작스러운 바람, 뒤 팀의 재촉 — 변수 하나에 리듬 전체가 흔들립니다.",
+ kv:[["최강일 때","익숙한 홈코스. 데이터가 쌓인 곳에서는 거의 안 집니다."],
+     ["무너질 때","처음 가는 코스에서 계획이 두 번 어긋났을 때."],
+     ["처방","라운드 전 '오늘 계획 두 번은 틀린다'고 미리 정해두기."]]},
+
+LSPC:{e:"♟️",mod:"티 안 나게 이기는",name:"전략가",
+ one:"조용히 치고 있었는데 다 세보면 1등입니다.",
+ style:["화려한 샷이 없습니다. 파온도 잘 안 합니다. 그런데 <b>스코어카드를 정리하면 늘 당신이 제일 좋습니다.</b>",
+ "위험한 홀은 애초에 안 갑니다. 계산해두고, 흔들리지 않고, 착실하게 보기와 파로 끊어요. 재미없어 보이지만 이게 이기는 골프입니다.",
+ "실수해도 반응이 없어서 동반자들이 당신 스코어를 <b>마지막에 가서야 확인</b>합니다. 그리고 놀랍니다."],
+ psych:"목표 지향적인데 감정 소모가 없는, 스코어 관리에는 최적의 조합입니다. 약점은 <b>큰 성장이 없다</b>는 것. 안전한 선택만 반복하면 실력의 천장이 생깁니다.",
+ kv:[["최강일 때","조건 나쁜 날의 스트로크 플레이. 여기선 거의 무적입니다."],
+     ["무너질 때","드물지만, 반드시 이겨야 하는 압박이 걸릴 때."],
+     ["처방","한 라운드에 한 홀은 일부러 공격적으로. 천장은 그렇게 뚫립니다."]]},
+
+LSIN:{e:"🔍",mod:"자기 탓부터 하는",name:"완벽주의자",
+ one:"연습은 안 했는데 기준은 프로급입니다.",
+ style:["안전하게 치고, 스코어를 신경 쓰고, 그런데 준비는 즉흥적입니다. 이 간극이 <b>매 라운드 자책의 원료</b>가 됩니다.",
+ "남 탓을 안 합니다. 캐디 탓도, 바람 탓도, 잔디 탓도 안 해요. 전부 내 탓입니다. 그래서 라운드가 끝나면 좀 지쳐 있습니다.",
+ "실은 실력이 나쁘지 않습니다. <b>본인 기준이 실력보다 두 단계 높을 뿐입니다.</b>"],
+ psych:"기대치와 준비량이 어긋난 채로 결과만 예민하게 받아들이니, 만족스러운 라운드가 좀처럼 안 나옵니다. <b>문제는 스윙이 아니라 채점 기준입니다.</b>",
+ kv:[["최강일 때","기대를 낮추고 나온 날. 이때 실력이 다 나옵니다."],
+     ["무너질 때","쉬운 홀에서 보기. 어려운 홀 더블보다 이게 더 아픕니다."],
+     ["처방","라운드 시작 전 목표 타수를 적고, 그것보다 잘 쳤는지만 보기."]]},
+
+LSIC:{e:"🧘",mod:"묵묵히 파온하는",name:"보기장인",
+ one:"화려하진 않은데 무너지지도 않습니다.",
+ style:["큰 거 안 노립니다. 준비도 별로 안 합니다. 그런데 <b>매번 비슷한 스코어가 나옵니다.</b> 이게 은근히 어려운 일이에요.",
+ "OB도 잘 안 나고 양파도 잘 안 납니다. 그냥 보기, 보기, 파, 보기. 재미없다고요? 90타는 그렇게 치는 겁니다.",
+ "동반자로서 최고의 미덕이 있습니다. <b>절대 밀지 않고, 절대 화내지 않습니다.</b>"],
+ psych:"결과 지향적이지만 감정에 휘둘리지 않아 라운드 내내 편차가 작습니다. 대신 <b>드라마가 없어서 골프가 지루해질 수 있습니다.</b>",
+ kv:[["최강일 때","18홀 내내. 편차가 작은 게 당신의 무기입니다."],
+     ["무너질 때","거의 안 무너집니다. 대신 아주 잘 치지도 않습니다."],
+     ["처방","연습장에서 한 클럽만 파고들기. 즉흥형에겐 이게 제일 잘 붙습니다."]]},
+
+LFPN:{e:"🎒",mod:"완벽하게 챙겨온다..",name:"총무",
+ one:"우산도 파스도 여분 볼도 당신 가방에 있습니다.",
+ style:["티타임 공지, 카풀 배차, 그늘집 정산까지 당신 몫입니다. 시키지도 않았는데 하고 있어요. <b>안 하면 불안하니까요.</b>",
+ "샷은 안전 위주입니다. 어차피 오늘의 목표는 스코어가 아니라 <b>모두가 기분 좋게 끝나는 것</b>이니까요.",
+ "그런데 정작 본인 라운드는 잘 못 즐깁니다. 누가 불편해 보이면 그게 계속 눈에 밟히거든요."],
+ psych:"분위기를 챙기는 마음에 예민한 촉이 붙어서, <b>남의 기분까지 내 몫으로 들고 다닙니다.</b> 라운드가 끝나면 몸보다 마음이 더 피곤한 이유입니다.",
+ kv:[["최강일 때","처음 만난 사람들과의 라운드. 당신 덕에 어색함이 사라집니다."],
+     ["무너질 때","챙긴 게 티가 안 났을 때. 서운함이 스윙에 들어옵니다."],
+     ["처방","라운드 중 3홀은 아무것도 안 챙기기. 팀은 안 무너집니다."]]},
+
+LFPC:{e:"🤝",mod:"누구와 쳐도 편한",name:"국민 동반자",
+ one:"골프장에서 제일 먼저 연락 오는 사람.",
+ style:["잘 준비해 오고, 잘 챙기고, 그런데 <b>전혀 부담을 안 줍니다.</b> 이게 얼마나 드문 조합인지 본인만 모릅니다.",
+ "안전하게 치고, 남 스코어에 관심 없고, 실수해도 툭툭 털어냅니다. 그래서 당신과 치면 다들 편하게 잘 칩니다.",
+ "<b>구력이 몇 년이든 어느 팀에 넣어도 굴러갑니다.</b> 골프 모임에서 제일 귀한 자원이에요."],
+ psych:"목적이 즐거움이고 멘탈이 단단하니 스트레스가 거의 없습니다. 유일한 아쉬움은 <b>본인 실력에 관심이 너무 없다</b>는 것.",
+ kv:[["최강일 때","분위기가 어색해진 순간. 당신이 한마디 하면 풀립니다."],
+     ["무너질 때","잘 없습니다. 다들 당신 덕에 안 무너집니다."],
+     ["처방","한 시즌만 목표 타수를 정해보기. 하면 되는 사람이거든요."]]},
+
+LFIN:{e:"💚",mod:"남먼저 살피는",name:"배려의 아이콘",
+ one:"내 차례보다 남의 볼을 먼저 찾아줍니다.",
+ style:["준비는 즉흥적인데 마음은 늘 남한테 가 있습니다. 내 볼 어디 갔는지도 모르면서 <b>남의 볼은 기가 막히게 찾아줘요.</b>",
+ "안전하게 칩니다. 시간 끌면 미안해서요. 뒤 팀이 붙으면 서둘러 치다가 본인 샷을 망칩니다. 그러고도 미안해합니다.",
+ "동반자들이 좋아합니다. 다만 <b>당신이 오늘 몇 개 쳤는지 아무도 모릅니다.</b> 본인도 모르고요."],
+ psych:"관계를 우선하는데 예민함까지 있으니, <b>라운드 내내 남 눈치를 보는 데 에너지를 씁니다.</b> 정작 본인 스윙에 쓸 집중력이 남지 않습니다.",
+ kv:[["최강일 때","팀 분위기가 안 좋을 때. 당신이 있어서 안 깨집니다."],
+     ["무너질 때","뒤 팀이 붙어서 재촉할 때. 그때부터 서두르기 시작합니다."],
+     ["처방","티박스에서만큼은 내 루틴 지키기. 5초는 아무도 뭐라 안 합니다."]]},
+
+LFIC:{e:"🌿",mod:"유유자적",name:"산책러",
+ one:"골프장에 잔디 보러 온 사람.",
+ style:["스코어를 안 셉니다. 아니, 세다가 맙니다. <b>오늘 날씨가 좋았으면 그걸로 성공한 라운드예요.</b>",
+ "안전하게 살살 치고, 준비도 딱히 안 하고, 잘 안 맞아도 별 감흥이 없습니다. 화가 안 나는 게 아니라 진짜로 신경이 안 쓰입니다.",
+ "가장 오래 골프를 칠 유형입니다. <b>이 게임에 지치지 않는 유일한 방식</b>으로 치고 있거든요."],
+ psych:"즐거움이 목적이고 멘탈이 무던하니 골프로 인한 감정 소모가 사실상 없습니다. 실력은 안 늘지만, <b>애초에 그게 목표가 아니었습니다.</b>",
+ kv:[["최강일 때","날씨 좋은 봄가을 아무 코스. 그냥 다 좋습니다."],
+     ["무너질 때","진지한 내기 라운드. 여기선 존재감이 사라집니다."],
+     ["처방","없습니다. 지금 방식이 제일 건강합니다."]]}
+};
+
+/* ---------- 평균타수별 팁 (플레이 축으로 분기) ---------- */
+var TIPS = {
+ "70대 이하":{D:"이 타수에서 공격형이면 이미 실력은 증명됐습니다. 남은 건 <b>한 라운드에 큰 실수 하나를 줄이는 것</b>뿐이에요. 언더는 거기서 갈립니다.",
+              L:"싱글 실력에 안전 지향이면 스코어가 아주 안정적일 겁니다. 대신 <b>파5 세컨샷 하나만 공격적으로</b> 바꿔도 언더가 보입니다."},
+ "80대":{D:"80대 공격형은 잘 치는 날과 망하는 날의 편차가 큽니다. <b>파4 두 홀만 레이업으로</b> 바꾸면 70대가 생각보다 빨리 옵니다.",
+         L:"80대 안전 지향은 이미 좋은 습관을 가졌습니다. 지금 필요한 건 배짱이 아니라 <b>퍼팅 연습량</b>입니다. 스코어는 그린 위에 있어요."},
+ "90대":{D:"90대에서 공격형이면 OB 한두 개가 스코어를 다 잡아먹고 있을 겁니다. <b>드라이버 대신 3번 우드로 티샷하는 홀을 세 개만</b> 정해보세요.",
+         L:"90대 안전 지향은 큰 실수가 적은 대신 파 기회가 적습니다. <b>세컨샷 클럽을 한 번호 길게</b> 잡는 것만으로 80대가 보입니다."},
+ "100대":{D:"100대 공격형의 스코어는 대부분 <b>티샷과 벌타</b>에서 나옵니다. 페어웨이만 지켜도 10타가 사라집니다. 재미는 좀 없겠지만요.",
+          L:"100대 안전 지향은 방향이 맞습니다. 지금은 <b>100m 안쪽 어프로치</b> 하나만 파세요. 이 구간이 100타를 깹니다."},
+ "110대 이상":{D:"아직 시원하게 치는 게 재밌을 때죠. 그것도 맞습니다. 다만 <b>한 홀에 볼 두 개까지만</b> 잃기로 정해두면 라운드가 훨씬 편해집니다.",
+               L:"천천히 안전하게 가는 게 맞습니다. 지금은 스코어보다 <b>18홀을 지치지 않고 도는 체력</b>이 먼저예요. 타수는 자연히 줄어듭니다."},
+ "아직 모름":{D:"아직 타수를 안 세는 단계라면 지금이 제일 재밌을 때입니다. 공격적인 성향이니 <b>비거리 욕심은 잠시 접고 방향</b>부터 잡으세요.",
+              L:"타수를 안 세는 단계에서 안전 지향이면 골프가 오래갑니다. <b>드라이버보다 7번 아이언</b>에 시간을 쓰세요. 제일 빠른 길입니다."}
+};
+
+/* ---------- 라운드 목적 코멘트 (목적 축으로 분기) ---------- */
+var PURPOSE = {
+ "실력 향상":{S:"실력 향상이 목적이고 스코어 지향이니 방향은 정확합니다. 다만 <b>같이 치는 사람도 진지한 쪽</b>이어야 합니다. 웃고 떠드는 팀에 들어가면 혼자 예민해집니다.",
+              F:"실력을 늘리고 싶다고 하셨는데 성향은 분위기 쪽입니다. 이게 나쁜 게 아니라, <b>실력은 라운드가 아니라 연습장에서 늘리셔야</b> 한다는 뜻입니다."},
+ "친목·모임":{S:"친목이 목적인데 성향은 스코어 지향입니다. 이 간극이 은근한 스트레스가 됩니다. <b>모임 라운드에서는 스코어카드를 아예 안 적는</b> 것도 방법이에요.",
+              F:"목적과 성향이 완전히 일치합니다. 모임에서 당신 같은 사람이 있어야 판이 굴러갑니다. <b>당신이 즐거우면 그 라운드는 성공</b>입니다."},
+ "비즈니스":{S:"비즈니스 라운드에서 스코어 지향은 위험할 수 있습니다. <b>이기는 것보다 상대가 기분 좋게 끝나는 것</b>이 목적이라는 걸 첫 홀에 한 번 되새기세요.",
+             F:"비즈니스 골프에 최적화된 성향입니다. 스코어에 연연하지 않고 상대를 편하게 만드는 게 당신의 기본값이니까요. <b>이건 배워서 되는 게 아닙니다.</b>"},
+ "스트레스 해소":{S:"스트레스를 풀러 나왔는데 스코어에 진심이면 <b>스트레스를 받으러 가는 셈</b>이 되기 쉽습니다. 한 달에 한 번은 스코어카드 없이 나가보세요.",
+                  F:"목적과 성향이 잘 맞습니다. 당신에게 골프는 제대로 쉼표 역할을 하고 있어요. <b>내기 라운드만 피하면</b> 이 관계는 오래갑니다."}
+};
+
+/* ---------- 로딩 문구 (구력으로 분기) ---------- */
+var LOADS = {
+ "1년 미만":["스코어카드를 넘겨보는 중…","입문 6개월차의 선택을 읽는 중…","아직 안 굳은 성향을 잡아내는 중…"],
+ "1~3년":["스코어카드를 넘겨보는 중…","한창 재미 붙은 구력을 반영하는 중…","4개의 축으로 환산하는 중…"],
+ "3~5년":["스코어카드를 넘겨보는 중…","구력 3~5년의 습관을 분석하는 중…","동반자 궁합을 계산하는 중…"],
+ "5~10년":["스코어카드를 넘겨보는 중…","굳어진 라운드 루틴을 읽는 중…","16유형 중 당신 자리를 찾는 중…"],
+ "10년 이상":["스코어카드를 넘겨보는 중…","10년치 라운드를 압축하는 중…","베테랑의 선택을 해석하는 중…"]
+};
+
+/* ============================================================
+   상태
+   ============================================================ */
+var state = {form:{},answers:[],type:null,pct:{},letters:{}};
+var invited = null;     // 링크로 초대한 친구 {t, n}
+var statData = null;    // 서버 집계
+var W = {play:[1,1,1], goal:[1.5,1,1,1], prep:[1,1,1], mental:[1.5,1,1,1]};
+
+function $(id){return document.getElementById(id)}
+function josa(w,y,n){
+  if(!w) return y;
+  var c = w.charCodeAt(w.length-1);
+  if (c<0xAC00 || c>0xD7A3) return y;
+  return ((c-0xAC00)%28) ? y : n;
+}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function go(name){
+  document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('on')});
+  $('s-'+name).classList.add('on');
+  window.scrollTo(0,0);
+}
+function toast(msg){
+  var t=$('toast'); t.textContent=msg; t.classList.add('on');
+  clearTimeout(t._x); t._x=setTimeout(function(){t.classList.remove('on')},1900);
+}
+
+/* ============================================================
+   시작: 초대 링크 확인 + 폼 구성
+   ============================================================ */
+(function init(){
+  var p = new URLSearchParams(location.search);
+  var t = (p.get('t')||'').toUpperCase();
+  if (T[t]) {
+    invited = {t:t, n:(p.get('n')||'').slice(0,8)};
+    var who = invited.n ? esc(invited.n)+'님' : '친구';
+    $('invitedBox').style.display='block';
+    $('invitedBox').innerHTML =
+      '<div>'+who+josa(who,'은','는')+' <b>'+t+' '+esc(T[t].name)+'</b>'+
+      '</div><div class="t">테스트를 마치면 두 사람의 궁합이 바로 나옵니다</div>';
+  }
+  // 인적사항 칩 렌더
+  document.querySelectorAll('.chips').forEach(function(box){
+    var f = box.dataset.f;
+    FIELDS[f].forEach(function(v){
+      var b=document.createElement('button');
+      b.className='chip'; b.textContent=v;
+      b.onclick=function(){
+        box.querySelectorAll('.chip').forEach(function(c){c.classList.remove('on')});
+        b.classList.add('on'); state.form[f]=v; checkForm();
+      };
+      box.appendChild(b);
+    });
+  });
+  $('nick').addEventListener('input',checkForm);
+})();
+
+function checkForm(){
+  var ok = $('nick').value.trim().length>0 &&
+    ['gender','age','career','score','purpose'].every(function(k){return state.form[k]});
+  $('formNext').disabled = !ok;
+}
+
+/* ============================================================
+   퀴즈
+   ============================================================ */
+var qi = 0;
+function startQuiz(){
+  state.form.nick = $('nick').value.trim();
+  state.answers = []; qi = 0;
+  go('quiz'); renderQ();
+}
+function renderQ(){
+  var q = QS[qi];
+  $('bar').style.width = (qi/QS.length*100)+'%';
+  $('qnum').textContent = (qi+1)+'/'+QS.length;
+  $('qtitle').textContent = q.t;
+  $('optAText').innerHTML = esc(q.a);
+  $('optBText').innerHTML = esc(q.b);
+  $('optA').classList.toggle('sel', state.answers[qi]===0);
+  $('optB').classList.toggle('sel', state.answers[qi]===1);
+  window.scrollTo(0,0);
+}
+function pick(i){
+  state.answers[qi] = i;
+  renderQ();
+  setTimeout(function(){
+    if (qi < QS.length-1){ qi++; renderQ(); }
+    else { finish(); }
+  }, 190);
+}
+function prevQ(){
+  if (qi>0){ qi--; renderQ(); } else { go('form'); }
+}
+
+/* ============================================================
+   채점
+   ============================================================ */
+function score(){
+  var acc={}, tot={}, idx={};
+  AXES.forEach(function(a){acc[a.key]=0; tot[a.key]=0; idx[a.key]=0});
+  QS.forEach(function(q,i){
+    var w = W[q.ax][idx[q.ax]]; idx[q.ax]++;
+    tot[q.ax] += w;
+    var v = state.answers[i]===0 ? q.av : q.bv;
+    var ax = AXES.filter(function(a){return a.key===q.ax})[0];
+    if (v === ax.L) acc[q.ax] += w;
+  });
+  var code='';
+  AXES.forEach(function(a){
+    var pct = Math.round(acc[a.key]/tot[a.key]*100);
+    state.pct[a.key] = pct;
+    var win = pct >= 50 ? a.L : a.R;
+    state.letters[a.key] = win;
+    code += win;
+  });
+  state.type = code;
+}
+
+function finish(){
+  score();
+  go('load');
+  var msgs = LOADS[state.form.career] || LOADS["3~5년"];
+  var k=0; $('loadMsg').textContent = msgs[0];
+  var iv = setInterval(function(){ k++; if(msgs[k]) $('loadMsg').textContent = msgs[k]; }, 780);
+  submit();
+  setTimeout(function(){ clearInterval(iv); renderResult(); go('result'); }, 2500);
+}
+
+/* ============================================================
+   궁합 계산
+   ============================================================ */
+function compat(a,b){
+  var s = 50;
+  s += (a[1]===b[1]) ? 20 : -25;                       // 목적 축이 가장 큰 변수
+  if (a[3]==='N' && b[3]==='N') s -= 20;               // 둘 다 예민하면 위험
+  else if (a[3]!==b[3]) s += 15;                       // 한쪽이 받쳐주면 좋음
+  else s += 5;                                         // 둘 다 무던
+  s += (a[2]===b[2]) ? 10 : -8;                        // 준비 방식
+  s += (a[0]!==b[0]) ? 8 : 2;                          // 플레이는 달라도 재밌음
+  return Math.max(7, Math.min(99, s));
+}
+function whyGood(a,b){
+  var r=[];
+  if (a[1]===b[1]) r.push(a[1]==='S'
+    ? "둘 다 <b>스코어를 보러 나온 사람</b>이라, 같은 홀에서 같은 게임을 합니다. 궁합의 8할이 여기서 결정됩니다."
+    : "둘 다 <b>분위기를 보러 나온 사람</b>이라 스코어로 서로를 불편하게 만들 일이 없습니다.");
+  if (a[3]!==b[3]) r.push("한쪽이 흔들릴 때 다른 쪽이 안 흔들립니다. <b>4시간짜리 게임에서 이게 제일 큽니다.</b>");
+  else if (a[3]==='C') r.push("둘 다 웬만해선 안 흔들려서 라운드가 조용하고 편안합니다.");
+  if (a[0]!==b[0]) r.push("플레이 성향은 정반대라 서로 보는 재미가 있습니다.");
+  if (a[2]===b[2]) r.push("준비하는 방식이 같아서 티타임 전부터 손발이 맞습니다.");
+  return r.slice(0,2).join(" ");
+}
+function whyBad(a,b){
+  var r=[];
+  if (a[1]!==b[1]) r.push("한 사람은 스코어를, 한 사람은 분위기를 보러 나왔습니다. <b>같은 홀에서 서로 다른 게임을 하는 셈</b>이라 4시간이 길어집니다.");
+  if (a[3]==='N' && b[3]==='N') r.push("둘 다 예민한 쪽이라 <b>한 명이 무너지면 같이 무너집니다.</b> 받쳐줄 사람이 없어요.");
+  if (a[2]!==b[2]) r.push("한쪽은 계획대로 가고 싶고 한쪽은 그때그때 정하고 싶어서, 티오프 전부터 삐걱댑니다.");
+  if (!r.length) r.push("치명적인 충돌은 없지만 서로에게 얻어갈 게 적은 조합입니다.");
+  return r.slice(0,2).join(" ");
+}
+function findMates(me){
+  var all = Object.keys(T).map(function(c){return {c:c, s:compat(me,c)}});
+  all.sort(function(x,y){return y.s-x.s});
+  return {best:all[0], worst:all[all.length-1]};
+}
+
+/* ============================================================
+   결과 렌더
+   ============================================================ */
+function renderResult(){
+  var code = state.type, t = T[code], f = state.form;
+
+  $('rNick').textContent = f.age+' · 구력 '+f.career+' · 평균 '+f.score+' · '+f.nick+'님';
+  $('rEmoji').textContent = t.e;
+  $('rMod').textContent = t.mod;
+  $('rName').textContent = t.name;
+  $('rOne').textContent = t.one;
+
+  // 코드 4글자 (탭하면 해당 축 설명)
+  $('codeRow').innerHTML = AXES.map(function(a,i){
+    var win = state.letters[a.key];
+    var kn = (win===a.L) ? a.ln : a.rn;
+    return '<button class="code-ltr" onclick="focusAxis('+i+')"><b>'+win+'</b><i>'+kn+'</i></button>';
+  }).join('');
+
+  // 4축 그래프
+  $('axes').innerHTML = AXES.map(function(a,i){
+    var p = state.pct[a.key], leftWin = p>=50;
+    return '<div class="axis" id="ax'+i+'">'+
+      '<div class="axis-head">'+
+        '<span class="l '+(leftWin?'win':'lose')+'"><b>'+a.L+'</b> '+a.ln+'</span>'+
+        '<span class="r '+(leftWin?'lose':'win')+'">'+a.rn+' <b>'+a.R+'</b></span>'+
+      '</div>'+
+      '<div class="axis-bar"><i class="fill'+(leftWin?'':' right')+'" style="width:'+(leftWin?p:100-p)+'%;'+(leftWin?'':'margin-left:auto')+'"></i></div>'+
+      '<div class="axis-pct"><span class="'+(leftWin?'win':'')+'">'+p+'%</span><span class="'+(leftWin?'':'win')+'">'+(100-p)+'%</span></div>'+
+      '<div class="axis-desc" id="axd'+i+'"><b>'+(leftWin?a.L:a.R)+'</b> — '+(leftWin?a.ld:a.rd)+'</div>'+
+    '</div>';
+  }).join('');
+
+  // 4글자 읽는 법
+  $('ltrTable').innerHTML = AXES.map(function(a){
+    return '<div class="ltr-row"><div class="ltr-badge">'+a.L+'</div><div class="ltr-b"><b>'+a.ln+'</b><p>'+a.ld+'</p></div></div>'+
+           '<div class="ltr-row"><div class="ltr-badge">'+a.R+'</div><div class="ltr-b"><b>'+a.rn+'</b><p>'+a.rd+'</p></div></div>';
+  }).join('');
+
+  // 1. 스타일
+  $('rStyle').innerHTML = t.style.map(function(p){return '<p>'+p+'</p>'}).join('');
+  var tip = (TIPS[f.score]||TIPS["아직 모름"])[code[0]];
+  $('rTip').innerHTML = '<b>평균 '+f.score+'인 '+t.name+'에게</b><br>'+tip;
+
+  // 2. 심리
+  $('rPsych').innerHTML = '<p>'+t.psych+'</p>';
+  $('rMindKv').innerHTML = t.kv.map(function(kv){
+    return '<div class="kv"><div class="k">'+kv[0]+'</div><div class="v">'+kv[1]+'</div></div>';
+  }).join('');
+
+  // 3. 궁합
+  var m = findMates(code);
+  $('rMates').innerHTML =
+    mateHtml('best','최고의 동반자',m.best.c,m.best.s,whyGood(code,m.best.c)) +
+    mateHtml('worst','최악의 조합',m.worst.c,m.worst.s,whyBad(code,m.worst.c));
+  $('rPurpose').innerHTML = '<b>「'+f.purpose+'」'+josa(f.purpose,'을','를')+' 위해 골프를 치는 '+t.name+'에게</b><br>'+
+    (PURPOSE[f.purpose]||PURPOSE["친목·모임"])[code[1]];
+
+  // 초대 링크로 들어온 경우: 친구와의 궁합
+  if (invited) renderCompare(code);
+
+  // 4. 다른 사람들의 선택
+  renderStats();
+}
+function mateHtml(cls,lab,c,s,why){
+  var t=T[c];
+  return '<div class="mate '+cls+'"><div class="mate-emoji">'+t.e+'</div><div class="mate-b">'+
+    '<div class="mate-lab">'+lab+'</div>'+
+    '<div class="mate-name">'+t.name+'<span>'+c+'</span><span class="score-pill">'+s+'점</span></div>'+
+    '<div class="mate-why">'+why+'</div></div></div>';
+}
+function focusAxis(i){
+  var d = $('axd'+i), box = $('ax'+i);
+  var open = d.classList.contains('on');
+  for (var k=0;k<4;k++){ $('axd'+k).classList.remove('on'); $('ax'+k).classList.remove('hl'); }
+  if (!open){ d.classList.add('on'); box.classList.add('hl'); box.scrollIntoView({behavior:'smooth',block:'center'}); }
+}
+function toggleAcc(id){ $(id).classList.toggle('on'); }
+
+function renderCompare(me){
+  var you = invited.t, s = compat(me,you), t=T[you];
+  var who = invited.n ? invited.n+'님' : '친구';
+  var verdict = s>=75 ? "찰떡입니다. 정기 라운드 잡으세요."
+              : s>=55 ? "무난합니다. 같이 쳐도 탈 없어요."
+              : s>=40 ? "애매합니다. 내기만 안 하면 괜찮습니다."
+              : "쉽지 않은 조합입니다. 그래도 재미는 있겠네요.";
+  $('cmpTitle').textContent = who+josa(who,'과','와')+' 나의 궁합';
+  $('cmpBody').innerHTML =
+    '<div style="text-align:center;padding:8px 0 18px">'+
+      '<div style="font-size:13px;color:var(--ink-3);font-weight:700">'+esc(who)+' '+you+' '+esc(t.name)+' × 나 '+me+' '+esc(T[me].name)+'</div>'+
+      '<div style="font-size:52px;font-weight:900;color:var(--green-700);line-height:1.2;margin-top:6px">'+s+'<span style="font-size:22px">점</span></div>'+
+      '<div style="font-size:15px;font-weight:800;color:var(--ink)">'+verdict+'</div>'+
+    '</div>'+
+    '<div class="body-text"><p>'+(s>=55?whyGood(me,you):whyBad(me,you))+'</p></div>';
+  $('cmpCard').style.display='block';
+}
+
+/* ============================================================
+   내 선택 vs 다른 사람들
+   ============================================================ */
+function renderStats(){
+  var ok = statData && statData.n >= MIN_N;
+  var head = ok
+    ? '<p style="font-size:13px;color:var(--ink-3);margin-bottom:6px">지금까지 '+statData.n.toLocaleString()+'명이 참여했습니다</p>'
+    : '';
+  var rows = QS.map(function(q,i){
+    var mine = state.answers[i];
+    var texts = [q.a,q.b];
+    if (!ok){
+      return '<div class="stat"><div class="stat-q">Q'+(i+1)+'. '+esc(q.t)+'</div>'+
+        '<div class="stat-row mine"><div class="stat-txt">'+(mine===0?'A. ':'B. ')+esc(texts[mine])+'</div></div></div>';
+    }
+    var pa = statData.q[i], pb = 100-pa, mp = mine===0?pa:pb;
+    var rare = mp<=25 ? '<span class="rare">소수파 '+mp+'%</span>' : '';
+    return '<div class="stat"><div class="stat-q">Q'+(i+1)+'. '+esc(q.t)+rare+'</div>'+
+      [0,1].map(function(k){
+        var pct = k===0?pa:pb;
+        return '<div class="stat-row'+(mine===k?' mine':'')+'">'+
+          '<div class="stat-txt">'+(k===0?'A. ':'B. ')+esc(texts[k])+'</div>'+
+          '<div class="stat-track"><i style="width:'+pct+'%"></i></div>'+
+          '<div class="stat-pct">'+pct+'%</div></div>';
+      }).join('')+'</div>';
+  }).join('');
+  var note = ok ? '' :
+    '<div class="stat-empty">아직 집계된 응답이 '+MIN_N+'명에 못 미쳐<br>비율은 표시하지 않습니다.<br><b style="color:var(--green-700)">참여자가 쌓이면 이 자리에 실제 비율이 나옵니다.</b></div>';
+  $('rStats').innerHTML = head + note + rows;
+}
+
+/* ============================================================
+   16유형 전부 보기
+   ============================================================ */
+var allFrom = null;
+function openAll(me){
+  allFrom = me;
+  $('allSub').textContent = me ? '내 유형은 강조되어 있습니다' : '당신은 어느 쪽에 가깝나요?';
+  $('allCta').textContent = me ? '내 결과로 돌아가기' : '테스트 시작하기';
+  $('allGrid').innerHTML = Object.keys(T).map(function(c){
+    var t=T[c];
+    return '<button class="all-item'+(c===me?' me':'')+'" onclick="peek(\''+c+'\')">'+
+      '<span class="all-emoji">'+t.e+'</span>'+
+      '<span class="all-code">'+c+'</span>'+
+      '<span class="all-name">'+esc(t.mod)+' <b>'+esc(t.name)+'</b></span>'+
+      (c===me?'<span class="me-tag">나</span>':'')+'</button>';
+  }).join('');
+  go('all');
+}
+function peek(c){ var t=T[c]; toast(c+' '+t.name+' — '+t.one); }
+function allBack(){ go(allFrom ? 'result' : 'form'); }
+
+/* ============================================================
+   공유
+   ============================================================ */
+function shareUrl(){
+  var base = location.origin + location.pathname;
+  return base + '?t=' + state.type + '&n=' + encodeURIComponent(state.form.nick);
+}
+function shareLink(){
+  var t = T[state.type];
+  var url = shareUrl();
+  var text = state.form.nick+'님의 골프 성향은 '+state.type+' '+t.mod+' '+t.name+'!\n내 골프 4글자도 확인해보세요 ⛳';
+  if (navigator.share){
+    navigator.share({title:'골프 성향 16유형', text:text, url:url}).catch(function(){});
+  } else if (navigator.clipboard){
+    navigator.clipboard.writeText(text+'\n'+url).then(function(){toast('링크를 복사했습니다')},
+      function(){prompt('아래 주소를 복사하세요', url)});
+  } else {
+    prompt('아래 주소를 복사하세요', url);
+  }
+}
+function drawCard(){
+  var c=$('cv'), x=c.getContext('2d'), t=T[state.type];
+  var g=x.createLinearGradient(0,0,0,1350);
+  g.addColorStop(0,'#14503a'); g.addColorStop(.55,'#0b2e20'); g.addColorStop(1,'#07251a');
+  x.fillStyle=g; x.fillRect(0,0,1080,1350);
+  x.textAlign='center';
+  x.fillStyle='rgba(255,255,255,.45)'; x.font='700 30px -apple-system,"Apple SD Gothic Neo",sans-serif';
+  x.fillText('GOLF BALANCE GAME · 16 TYPES', 540, 108);
+  x.fillStyle='rgba(255,255,255,.75)'; x.font='600 34px -apple-system,"Apple SD Gothic Neo",sans-serif';
+  x.fillText(state.form.nick+'님의 골프 4글자', 540, 190);
+
+  // 코드 박스
+  var bw=140, gap=18, tot=bw*4+gap*3, sx=(1080-tot)/2;
+  AXES.forEach(function(a,i){
+    var win=state.letters[a.key], kn=(win===a.L)?a.ln:a.rn, X=sx+i*(bw+gap);
+    x.fillStyle='rgba(195,245,60,.14)';
+    rr(x,X,236,bw,166,26); x.fill();
+    x.strokeStyle='rgba(195,245,60,.45)'; x.lineWidth=3; rr(x,X,236,bw,166,26); x.stroke();
+    x.fillStyle='#c3f53c'; x.font='900 76px -apple-system,sans-serif';
+    x.fillText(win, X+bw/2, 340);
+    x.fillStyle='rgba(255,255,255,.6)'; x.font='700 26px -apple-system,"Apple SD Gothic Neo",sans-serif';
+    x.fillText(kn, X+bw/2, 380);
+  });
+
+  x.font='120px -apple-system,"Apple Color Emoji",sans-serif'; x.fillText(t.e, 540, 578);
+  x.fillStyle='rgba(255,255,255,.8)'; x.font='600 42px -apple-system,"Apple SD Gothic Neo",sans-serif';
+  x.fillText(t.mod, 540, 660);
+  x.fillStyle='#c3f53c'; x.font='900 82px -apple-system,"Apple SD Gothic Neo",sans-serif';
+  x.fillText(t.name, 540, 752);
+  x.fillStyle='rgba(255,255,255,.62)'; x.font='500 30px -apple-system,"Apple SD Gothic Neo",sans-serif';
+  wrap(x, t.one, 540, 812, 880, 42);
+
+  // 축 바
+  var by=900;
+  AXES.forEach(function(a,i){
+    var p=state.pct[a.key], leftWin=p>=50, Y=by+i*88;
+    x.textAlign='left'; x.fillStyle=leftWin?'#c3f53c':'rgba(255,255,255,.4)';
+    x.font='800 28px -apple-system,"Apple SD Gothic Neo",sans-serif';
+    x.fillText(a.L+' '+a.ln, 110, Y);
+    x.textAlign='right'; x.fillStyle=leftWin?'rgba(255,255,255,.4)':'#c3f53c';
+    x.fillText(a.rn+' '+a.R, 970, Y);
+    x.fillStyle='rgba(255,255,255,.14)'; rr(x,110,Y+14,860,20,10); x.fill();
+    x.fillStyle='#c3f53c';
+    if (leftWin) { rr(x,110,Y+14,860*p/100,20,10); } else { rr(x,970-860*(100-p)/100,Y+14,860*(100-p)/100,20,10); }
+    x.fill();
+    x.textAlign='center';
+  });
+
+  x.textAlign='center'; x.fillStyle='rgba(255,255,255,.38)';
+  x.font='600 26px -apple-system,"Apple SD Gothic Neo",sans-serif';
+  x.fillText('내 골프 4글자 확인하기 · '+location.host+location.pathname, 540, 1290);
+
+  return c;
+}
+function saveCard(){
+  var c = drawCard();
+  c.toBlob(function(blob){
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='골프성향_'+state.type+'_'+state.form.nick+'.png';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){URL.revokeObjectURL(a.href)},1500);
+    toast('결과 카드를 저장했습니다');
+  },'image/png');
+}
+function rr(x,X,Y,w,h,r){
+  x.beginPath();
+  x.moveTo(X+r,Y); x.lineTo(X+w-r,Y); x.quadraticCurveTo(X+w,Y,X+w,Y+r);
+  x.lineTo(X+w,Y+h-r); x.quadraticCurveTo(X+w,Y+h,X+w-r,Y+h);
+  x.lineTo(X+r,Y+h); x.quadraticCurveTo(X,Y+h,X,Y+h-r);
+  x.lineTo(X,Y+r); x.quadraticCurveTo(X,Y,X+r,Y); x.closePath();
+}
+function wrap(x,text,cx,cy,max,lh){
+  var words=text.split(' '), line='', y=cy;
+  words.forEach(function(w){
+    var test=line?line+' '+w:w;
+    if (x.measureText(test).width>max && line){ x.fillText(line,cx,y); line=w; y+=lh; }
+    else line=test;
+  });
+  x.fillText(line,cx,y);
+}
+
+/* ============================================================
+   집계 (Google Apps Script · JSONP)
+   ============================================================ */
+function submit(){
+  if (!API_URL) return;
+  try {
+    if (localStorage.getItem('gbg_sent_'+new Date().toDateString())) { fetchStats(); return; }
+  } catch(e){}
+  var cb = 'gbg'+Date.now();
+  window[cb] = function(res){ statData = res; try{ renderStats(); }catch(e){} cleanup(cb); };
+  var qs = '?callback='+cb+
+    '&a='+state.answers.join('')+
+    '&t='+state.type+
+    '&g='+encodeURIComponent(state.form.gender)+
+    '&age='+encodeURIComponent(state.form.age)+
+    '&career='+encodeURIComponent(state.form.career)+
+    '&score='+encodeURIComponent(state.form.score)+
+    '&purpose='+encodeURIComponent(state.form.purpose);
+  inject(API_URL+qs, cb);
+  try { localStorage.setItem('gbg_sent_'+new Date().toDateString(),'1'); } catch(e){}
+}
+function fetchStats(){
+  if (!API_URL) return;
+  var cb='gbgs'+Date.now();
+  window[cb]=function(res){ statData=res; try{ renderStats(); }catch(e){} cleanup(cb); };
+  inject(API_URL+'?callback='+cb+'&stats=1', cb);
+}
+function inject(src, cb){
+  var s=document.createElement('script');
+  s.src=src; s.async=true; s.id=cb;
+  s.onerror=function(){ cleanup(cb); };
+  document.head.appendChild(s);
+  setTimeout(function(){ cleanup(cb); }, 8000);
+}
+function cleanup(cb){
+  var el=document.getElementById(cb); if(el) el.remove();
+  try{ delete window[cb]; }catch(e){ window[cb]=undefined; }
+}
+
+function restart(){
+  state={form:{},answers:[],type:null,pct:{},letters:{}};
+  qi=0; $('nick').value=''; $('cmpCard').style.display='none';
+  document.querySelectorAll('.chip').forEach(function(c){c.classList.remove('on')});
+  checkForm(); go('intro');
+}
+</script>
+</body>
+</html>
