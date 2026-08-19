@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>골프 성향 16유형 — 나의 골프 4글자는?</title>
-<meta name="description" content="14개의 극단적인 밸런스게임으로 알아보는 나의 골프 성향 4글자. 골프 스타일, 골프 심리, 골프 궁합까지.">
+<meta name="description" content="20개의 극단적인 밸런스게임으로 알아보는 나의 골프 성향 4글자. 골프 스타일, 골프 심리, 골프 궁합까지.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="골프 성향 16유형 — 나의 골프 4글자는?">
-<meta property="og:description" content="14개의 극단적인 밸런스게임으로 알아보는 나의 골프 성향 4글자.">
+<meta property="og:description" content="20개의 극단적인 밸런스게임으로 알아보는 나의 골프 성향 4글자.">
 <meta property="og:image" content="https://ishur1125-design.github.io/golf-balance-game/og-image.png">
 <meta property="og:url" content="https://ishur1125-design.github.io/golf-balance-game/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9B%B3%3C/text%3E%3C/svg%3E">
@@ -215,11 +215,11 @@ canvas{display:none}
     <div class="hero-code">D · G · P · N</div>
     <h1 class="hero">골프 성향<br><em>16유형</em></h1>
     <p class="hero-sub">
-      극단적인 14개의 선택으로 알아보는<br>나의 <b>골프 4글자</b>.<br>
+      극단적인 20개의 선택으로 알아보는<br>나의 <b>골프 4글자</b>.<br>
       스타일 · 심리 · 골프 궁합까지.
     </p>
     <div class="meta-row">
-      <span>⛳ 14문항</span><span>⏱ 약 2분 30초</span><span>🎯 16유형</span>
+      <span>⛳ 20문항</span><span>⏱ 약 3분 30초</span><span>🎯 16유형</span>
     </div>
   </div>
   <div class="stack">
@@ -260,7 +260,7 @@ canvas{display:none}
   <div class="q-top">
     <button class="q-back" onclick="prevQ()">‹</button>
     <div class="bar"><i id="bar" style="width:0%"></i></div>
-    <div class="q-num" id="qnum">1/14</div>
+    <div class="q-num" id="qnum">1/20</div>
   </div>
   <h2 class="q-title" id="qtitle"></h2>
   <p class="q-hint">둘 중 하나만 고를 수 있다면?</p>
@@ -282,7 +282,7 @@ canvas{display:none}
   <div class="load">
     <div class="ball"></div>
     <div class="load-msg" id="loadMsg">스코어카드를 넘겨보는 중…</div>
-    <div class="load-sub">14개의 선택을 4개의 축으로 환산하고 있습니다</div>
+    <div class="load-sub">20개의 선택을 4개의 축으로 환산하고 있습니다</div>
   </div>
 </section>
 
@@ -393,7 +393,7 @@ var AXES = [
    rd:"한 홀 망해도 다음 홀엔 잊습니다. 잘 안 흔들립니다."}
 ];
 
-/* ---------- 14문항 ----------
+/* ---------- 20문항 (축당 5개) ----------
    ax: 축, a/b: 각 선택지가 가리키는 글자 */
 var QS = [
   {ax:"play",  t:"드라이버가 평생 이렇게 고정된다면?",
@@ -408,33 +408,51 @@ var QS = [
   {ax:"mental",t:"둘 중 하나는 반드시 겪는다면?",
    a:"라운드 전날 긴장돼서 잠을 잔 건지 만 건지", av:"N",
    b:"라운드 당일 늦잠 자서 몸도 못 풀고 헐레벌떡 도착", bv:"C"},
-  {ax:"play",  t:"평생 골프가 이렇게 고정된다면?",
-   a:"평생 이글 한 번 없음 + 평생 OB 한 번 없음", av:"L",
-   b:"매 라운드 이글 1개 + OB 3개", bv:"D"},
   {ax:"goal",  t:"소원 하나를 들어준다면?",
    a:"스코어가 10타 늘어난다. 대신 라운드가 매번 미치도록 즐겁다", av:"F",
    b:"스코어가 10타 줄어든다. 대신 골프가 하나도 설레지 않는다", bv:"G"},
-  {ax:"prep",  t:"내 골프 일정이 이렇게 된다면?",
-   a:"다음 라운드가 언제일지 나도 모름", av:"I",
-   b:"1년치 라운드가 이미 다 예약되어 있음", bv:"P"},
+  {ax:"play",  t:"평생 골프가 이렇게 고정된다면?",
+   a:"평생 이글 한 번 없음 + 평생 OB 한 번 없음", av:"L",
+   b:"매 라운드 이글 1개 + OB 3개", bv:"D"},
   {ax:"mental",t:"오늘 라운드에서 하나는 반드시 일어난다면?",
    a:"뒤 팀이 계속 붙어서 재촉한다", av:"C",
    b:"앞 팀이 홀마다 30분씩 밀린다", bv:"N"},
+  {ax:"prep",  t:"내 골프 일정이 이렇게 된다면?",
+   a:"다음 라운드가 언제일지 나도 모름", av:"I",
+   b:"1년치 라운드가 이미 다 예약되어 있음", bv:"P"},
   {ax:"play",  t:"파5 세컨샷. 그린 앞은 온통 물이다.",
    a:"투온 간다. 잘 맞아야 겨우 넘는 거리, 못 넘기면 트리플", av:"D",
    b:"끊어 간다. 이글 기회는 없지만 무난하게 파", bv:"L"},
+  {ax:"mental",t:"둘 중 하나를 감수해야 한다면?",
+   a:"내기에서 10만원을 잃는다", av:"N",
+   b:"그늘집에서 “나 요즘 폼 좋아” 자랑한 직후, 다음 홀에서 양파", bv:"C"},
   {ax:"goal",  t:"OB가 났는데 아무도 못 봤다.",
    a:"조용히 옮기고 2타 이득. 나만 알면 된다", av:"G",
    b:"정직하게 신고하고 2타 손해. 마음은 편하다", bv:"F"},
   {ax:"prep",  t:"신상 드라이버가 눈에 들어왔다.",
    a:"한 달 정도 리뷰·시타·중고가까지 다 뒤진 뒤 구매", av:"P",
    b:"매장에서 예뻐서 그 자리에서 결제", bv:"I"},
-  {ax:"mental",t:"둘 중 하나를 감수해야 한다면?",
-   a:"내기에서 10만원을 잃는다", av:"N",
-   b:"그늘집에서 “나 요즘 폼 좋아” 자랑한 직후, 다음 홀에서 양파", bv:"C"},
+  {ax:"mental",t:"동반자가 내 스윙에 대해 한마디 했다.",
+   a:"흘려듣고 원래 하던 대로 친다", av:"C",
+   b:"그 말이 계속 생각나서 다음 홀부터 스윙이 어색해진다", bv:"N"},
+  {ax:"play",  t:"공이 나무 뒤로 들어갔다.",
+   a:"나뭇가지 사이 좁은 틈으로 그린을 노린다", av:"D",
+   b:"옆으로 안전하게 레이업한다", bv:"L"},
+  {ax:"prep",  t:"지금 내 골프백을 열어보면?",
+   a:"클럽별로 정리돼 있고 볼·티·장갑 여분까지 있다", av:"P",
+   b:"뭐가 들었는지 나도 모른다. 볼이 몇 개인지도", bv:"I"},
   {ax:"goal",  t:"평생 이 동반자와만 쳐야 한다면?",
    a:"실력은 별로인데 하루 종일 웃겨주는 사람", av:"F",
    b:"실력도 매너도 좋은데, 18홀 내내 진지해서 농담 한마디 없는 사람", bv:"G"},
+  {ax:"play",  t:"3m 내리막 파 퍼팅. 지나치면 3퍼트다.",
+   a:"짧아도 좋으니 홀 앞에 붙인다", av:"L",
+   b:"홀을 지나가도록 확실하게 친다", bv:"D"},
+  {ax:"goal",  t:"라운드가 끝나고 저녁 자리.",
+   a:"오늘 어떻게 쳤는지, 그 얘기만 하다가 끝난다", av:"G",
+   b:"골프 얘기는 잠깐이고 금방 사는 얘기로 넘어간다", bv:"F"},
+  {ax:"prep",  t:"연습장에 갔다.",
+   a:"그냥 손에 잡히는 대로 친다", av:"I",
+   b:"오늘 칠 클럽과 개수를 정해두고 시작한다", bv:"P"},
   {ax:"mental",t:"라운드가 끝나고 집에 가는 차 안. 나는?",
    a:"오늘 몇 개 쳤는지 벌써 가물가물하다", av:"C",
    b:"그 홀 그 샷을 머릿속에서 열 번쯤 다시 치고 있다", bv:"N"}
@@ -655,7 +673,6 @@ var LOADS = {
 var state = {form:{},answers:[],type:null,pct:{},letters:{}};
 var invited = null;     // 링크로 초대한 친구 {t, n}
 var statData = null;    // 서버 집계
-var W = {play:[1,1,1], goal:[1.5,1,1,1], prep:[1,1,1], mental:[1.5,1,1,1]};
 
 function $(id){return document.getElementById(id)}
 function josa(w,y,n){
@@ -747,14 +764,13 @@ function prevQ(){
    채점
    ============================================================ */
 function score(){
-  var acc={}, tot={}, idx={};
-  AXES.forEach(function(a){acc[a.key]=0; tot[a.key]=0; idx[a.key]=0});
+  var acc={}, tot={};
+  AXES.forEach(function(a){acc[a.key]=0; tot[a.key]=0});
   QS.forEach(function(q,i){
-    var w = W[q.ax][idx[q.ax]]; idx[q.ax]++;
-    tot[q.ax] += w;
+    tot[q.ax] += 1;                       // 축당 5문항, 모든 문항이 동일한 1점
     var v = state.answers[i]===0 ? q.av : q.bv;
     var ax = AXES.filter(function(a){return a.key===q.ax})[0];
-    if (v === ax.L) acc[q.ax] += w;
+    if (v === ax.L) acc[q.ax] += 1;
   });
   var code='';
   AXES.forEach(function(a){
