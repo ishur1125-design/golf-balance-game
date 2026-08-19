@@ -4,7 +4,7 @@
 빌드 도구 없이 `index.html` 하나로 돌아갑니다.
 
 - 배포 예정 주소: https://ishur1125-design.github.io/golf-balance-game/
-- 4개의 축: **D**river/**L**ayup · **S**core/**F**un · **P**lan/**I**mpulse · **N**ervous/**C**ool
+- 4개의 축: **D**river/**L**ayup · **G**ross/**F**un · **P**lan/**I**mpulse · **N**ervous/**C**ool
 
 ## 파일
 
